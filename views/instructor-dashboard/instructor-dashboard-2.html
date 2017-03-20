@@ -1,0 +1,208 @@
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>Instructor Profile</h3>
+        </div>
+        <!-- /row -->
+    </div>
+</div>
+<!-- /container -->
+<div class="container">
+
+    <div class="center-title container">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="../assets/img/user-profile/spunky3.jpg" class="img-circle img-responsive" width="200" alt="Spunky Otter">
+            </div>
+            <div class="col-sm-6">
+                <h3>Instructor Bio</h3>
+                <p>
+                    Spunky Otter was born in London on a rainy night. He is a Hollywood actor and secretly teaches German on the side for LinGO.
+                    He enjoys long walks on the beach, cooking pasta, and playing with dogs.
+                </p>
+            </div>
+            <div class="col-sm-3"></div>
+            <!--end of col-sm-9 div -->
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="height: 50px;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <h4>Quizzes</h4>
+                <p>
+                    You may use these buttons to update questions and quizzes.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <button class="btn" data-toggle="collapse" data-target="#addQuiz" ngclick="">Add Quiz</button>
+                <form id="addQuiz" class="collapse" ng-submit="dash.onSubmit()" name="newQuiz">
+                    <div class="row">
+                        <label class="col-xs-6" for="newQuiz.quizName">Quiz Name</label>
+                        <input type="text" class="col-xs-6" id="newQuiz.quizName" name="newQuiz.quizName" ng-model="dash.quizName">
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6" for="coverPage">Cover Page</label>
+                        <input type="text" class="col-xs-6" name="coverPage" ng-model="dash.coverPage">
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6" for="endPage">End Page</label>
+                        <input type="text" class="col-xs-6" name="endPage" ng-model="dash.endPage">
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6" for="defaultAnswer">Default Answer Type</label>
+                        <select class="col-md-6" ng-model="dash.defaultAnswer">
+                            <option>Single</option>
+                            <option>Multiple</option>
+                            <option>Open</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6" for="timer">Timer</label>
+                        <input type="number" class="col-xs-6" name="timer" ng-model="dash.timer">
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6" for="randomizeQ">Randomize Questions</label>
+                        <select class="col-xs-6" name="randomizeQ" ng-model="dash.randomizeQ">
+                            <option>True</option>
+                            <option>False</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6" for="randomizeA">Randomize Answers</label>
+                        <select class="col-xs-6" name="randomizeA" ng-model="dash.randomizeA">
+                            <option>True</option>
+                            <option>False</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn">Submit New Quiz</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <!--Add a question to an existing quiz-->
+                <div class="row">
+                    <button class="btn" data-toggle="collapse" data-target="#addQuestion">Add Question to Quiz</button>
+                    <form id="addQuestion" name="addQuestion" class="collapse" ng-submit="dash.questionSubmit()">
+                        <div class="row">
+                            <label class="col-md-6">User ID</label>
+                            <input type="number" class="col-md-6" ng-model="dash.userId">
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Quiz ID</label>
+                            <input type="number" class="col-md-6" ng-model="dash.quizId">
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Question</label>
+                            <input type="text" class="col-md-6" ng-model="dash.question">
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Timer</label>
+                            <input type="number" class="col-md-6" ng-model="dash.timer">
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Answer Type</label>
+                            <select class="col-md-6" ng-model="dash.answerType">
+                                <option>Single</option>
+                                <option>Multiple</option>
+                                <option>Open</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Answer 1</label>
+                            <input type="text" class="col-md-6" ng-model="dash.answer1">
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Answer 2</label>
+                            <input type="text" class="col-md-6" ng-model="dash.answer2">
+                        </div>
+                        <div class="row">
+                            <label class="col-md-6">Answer 3 </label>
+                            <input type="text" class="col-md-6" ng-model="dash.answer3">
+                        </div>
+
+                        <button type="submit" class="btn">Submit Question</button>
+                    </form>
+                    <div class="col-md-2"></div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of row-->
+        </div>
+    </div>
+    <!--end of row -->
+    <div class="row">
+        <div class="col-md-12" style="height: 50px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <h4>Courses</h4>
+            <p>
+                Please use this button to add a new course.
+            </p>
+        </div>
+        <div class="row">
+            <button class="btn" id="addCourseButton" data-toggle="collapse" data-target="#addCourse">Add a Course</button>
+            <form id="addCourse" name="addCourse" class="collapse" ng-submit="dash.addCourseFunction()">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Details</label>
+                    <input class="col-md-3" type="text" ng-model="dash.courseDetails">
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Code</label>
+                    <input class="col-md-3" type="text" ng-model="dash.courseCode">
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Title</label>
+                    <input class="col-md-3" type="text" ng-model="dash.courseTitle">
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Description</label>
+                    <input class="col-md-3" type="textbox" ng-model="dash.courseDescription">
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Price</label>
+                    <input class="col-md-3" type="number" ng-model="dash.coursePrice">
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Format</label>
+                    <input class="col-md-3" type="text" ng-model="dash.courseFormat">
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div>
+                    <div class="col-md-3"></div>
+                    <label class="col-md-3">Course Time in Minutes</label>
+                    <input class="col-md-3" type="number" ng-model="dash.courseMinutes">
+                    <div class="col-md-3"></div>
+                </div>
+                <br/>
+                <button type="submit" class="btn">Submit Course</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--end of container on line 9 -->

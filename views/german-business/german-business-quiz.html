@@ -1,0 +1,63 @@
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>Business German Quiz 1.1</h3>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /blue -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="sidebar-box">
+                <img src="../assets/img/adventure/md-germany.jpg" class="img-responsive" alt="Rhineland">
+            </div>
+            <div class="sidebar-box">
+                <h3>Teacher</h3>
+                <div class="media">
+                    <div class="media-left">
+                        <!--<div class="image">
+                            <div>
+                                <img src="../assets/img/zoo-portraits/ocelot.jpg" alt="agent">
+                            </div>
+                            content
+                        </div>
+                        image-->
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="#">Jerilyn</a></h4>
+                        <em>555-555-5555</em>
+                        <a href="#"><i class="fa fa-envelope"></i> jerilyn@mailinator.com</a>
+                        <img src="../assets/img/zoo-portraits/ocelot.jpg" alt="Jerilyn" style="border-radius: 50%">
+                    </div>
+
+                </div>
+                <!--media-->
+                <div class="media"></div>
+                <!--sidebar box-->
+            </div>
+            <!--sidebar-->
+        </div>
+        <div class="col-md-9">
+            <h4 class="title-section">Quiz 1.1: Business Etiquette</h4>
+            <div id="target">
+                <a ui-sref="german-business"><button style="background-color: yellow; border-radius: 10%;">Back to Lesson</button></a>
+                <div>
+                    <p>{{GBQuiz.items.quizName}}</p>
+                    <p>{{GBQuiz.items.defaultAnswerType}}</p>
+                    <div ng-repeat="quiz in GBQuiz.items">
+                        <h4>{{quiz.question}}</h4>
+                        <ol>
+                            <li><input type="checkbox" ng-modal="GBQuiz"><em>{{quiz.answers[0].answer}}</em></li>
+                            <li><input type="checkbox" ng-modal="GBQuiz"><em>{{quiz.answers[1].answer}}</em></li>
+                            <li><input type="checkbox" ng-modal="GBQuiz"><em>{{quiz.answers[2].answer}}</em></li>
+                        </ol>
+                    </div>
+                    <a ui-sref="business-thanks"><button type="submit" class="btn" style="background-color: yellow; border-radius: 10%;">Submit Quiz Answers</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

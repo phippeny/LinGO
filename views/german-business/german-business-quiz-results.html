@@ -1,0 +1,59 @@
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>German Business Etiquette Quiz Answer Key</h3>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /blue -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="sidebar-box">
+                <img src="../assets/img/adventure/md-germany.jpg" class="img-responsive" alt="Rhineland">
+            </div>
+            <div class="sidebar-box">
+                <h3>Teacher</h3>
+                <div class="media">
+                    <div class="media-left">
+                        <div class="image">
+                            <div class="content">
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                                <img src="../assets/img/user-profile/spunky3.jpg" alt="agent">
+                            </div>
+                            <!--content-->
+                        </div>
+                        <!--image-->
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="#">Spunky</a></h4>
+                        <em>666-666-6666</em>
+                        <a href="#"><i class="fa fa-envelope"></i> spunky@mailinator.com</a>
+                    </div>
+                </div>
+                <!--media-->
+                <div class="media"></div>
+                <!--sidebar box-->
+            </div>
+            <!--sidebar-->
+        </div>
+        <div class="col-md-9">
+            <h2 class="title-section">Quiz 1.1 Answer Key</h2>
+            <a ui-sref="german-business"><button>Back to Lesson</button></a>
+            <div id="target">
+                <p>{{GBQuiz.items.quizName}}</p>
+                <div ng-repeat="quiz in GBQuiz.items">
+                    <h4>{{quiz.question}}</h4>
+                    <ol>
+                        <li><input type="checkbox" ng-modal="GBQuiz">{{quiz.answers[0].answer}}</li>
+                        <li><input type="checkbox" ng-modal="GBQuiz">{{quiz.answers[1].answer}}</li>
+                        <li><input type="checkbox" ng-modal="GBQuiz">{{quiz.answers[2].answer}}</li>
+                    </ol>
+                </div>
+                <button type="submit" class="btn">Submit Quiz Answers</button>
+            </div>
+        </div>
+    </div>
+</div>
